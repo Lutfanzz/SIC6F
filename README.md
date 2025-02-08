@@ -1,2 +1,4 @@
 # SIC6F
-jkjkafjkajkjakkfagygygyggygyggy
+
+
+oke kali ini kita 
