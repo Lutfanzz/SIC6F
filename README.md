@@ -1,4 +1,2 @@
 # SIC6F
-
-
-oke kali ini kita 
+SIC6 adalah sebuah program yang keren dan seru
