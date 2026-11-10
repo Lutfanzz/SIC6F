@@ -6,15 +6,15 @@ import urequests
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-wlan.connect("CTAF Sukoharjo","Bintang#1")
+wlan.connect("")
 
 while not wlan.isconnected():
     print(".",end="")
     time.sleep(.1)
 
 print("WLAN is connected")
-UBIDOTS_ENDPOINT = "https://industrial.api.ubidots.com/api/v1.6/devices/esp32-dorminder/"
-FLASK_ENDPOINT = "http://192.168.1.234:5003/save"
+UBIDOTS_ENDPOINT = ""
+FLASK_ENDPOINT = ""
 
 
 sensor = dht.DHT11(machine.Pin(15))
@@ -25,7 +25,7 @@ while True:
     print(f"Suhu = {suhu} C, kelembaban = {kelembaban} %")
     
     data = {"suhu":suhu,"kelembaban":kelembaban}
-    headers = {"Content-Type":"application/json","X-Auth-Token":"BBUS-7kchE2KvM3jSIBPuRNQfNqwzaawOfH"}
+    headers = {"Content-Type":"application/json","X-Auth-Token":""}
     response = urequests.post(UBIDOTS_ENDPOINT,json=data,headers=headers)
     
     print(f"response ubidots: {response.status_code}")
